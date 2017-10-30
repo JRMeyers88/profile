@@ -1,26 +1,10 @@
 
-/*    Title - make it meaningful.
-    Header element <h1> - This is the main headline; include your name and what this page is.
-    Photo
-    Section element containing your bio
-    Section element with links to resources or sites you like
-    Section element with two sections for future projects (placeholders)
-    Section area containing your blog posts. Each of these should use article element.
-    Footer element with email and professional social media links; Github, twitter, LinkedIn, etc.
-    Semantic mark-up for all major elements.
-    Validate your html page with W3 validator: https://validator.w3.org/
-    Appropriate folder structure: images, css.
-    Color scheme - choose primary, secondary, and tertiary colors in addition to black and white. Use these colors consistently in your stylesheet.
-    The page will have a linked JavaScript file for the blog posts section. Create an array to hold your posts (at least 2 posts). Each item in the array must be an object that contains at a minimum the following information: Title, Copy, Date. Use JavaScript to add each post to the DOM.
-*/
 * {
 	box-sizing: border-box;
 	font-family: 'Didact Gothic', sans-serif;
 }
 
 body {
-	/*color: #5C5C5C;*/
-	/*padding: 0 120px;*/
 	margin: 0;
 	display: block;
 	background-image: url('../images/mountains.jpg');
@@ -32,29 +16,22 @@ body {
 header {
 	height: 450px;
 	background: 
-        /*linear-gradient(0deg, #000, transparent),*/
         url('../images/skywave.jpg') no-repeat center;
 	background-size: cover;
 }
 
 .nameheader {
-	/* float: left; */
-	/* padding-left: 5%; */
 	padding-top: 80px;	
 	font-size: 8em;
 	color: #fad19d;
 }
 
 .subnameheader {
-	/* float: left;
-	padding: 18% 5% 0 0;
-	font-size: 4em; */
 	color: #EBEBEB;
 }
 
 
 header h1 {
-	/* padding-top: 80px; */
 	text-align: center;
 	font-size: 3em;
 	color: white;
@@ -62,16 +39,6 @@ header h1 {
 	position: relative;
 }
 
-/*TODO: Get picture to fit next to h1 without screwing up*/
-/*header .pic img {
-	height: 250px;
-	/*padding-left: 10%;*/
-	/*float: left;
-	border-radius: 50%;
-	border: solid 4px #fff;
-	padding: 0;
-	margin: 0;
-}*/
 
 
 /*----------------------------------*/
@@ -80,7 +47,8 @@ header h1 {
 	width: 100%;
 	float: left;
 	overflow: hidden;
-	height: 400px;
+	min-height: 400px;
+	background-color: #EBEBEB;
 }
 
 .bio {
@@ -90,10 +58,8 @@ header h1 {
 	font-size: 1.5em;
 	color: #5C5C5C;
 	background-color: #EBEBEB;
-	/*background-color: rgba(235, 235, 235, 0.7)*/
 	position: relative;
-	/* overflow: hidden; */
-	height: 400px;
+	min-height: 400px;
 }
 
 .tech {
@@ -103,7 +69,6 @@ header h1 {
 	font-size: 1.5em;
 	color: #5C5C5C;
 	background-color: #EBEBEB;
-	/*background-color: rgba(235, 235, 235, 0.7)*/
 	position: relative;
 	overflow: hidden;
 	height: 650px;
@@ -116,8 +81,8 @@ header h1 {
 	float: left;
 	width: 33.3%;
 	padding: 0 10% 0 5%;
-	background-color: #DEDEDE;
-	height: 400px;
+	background-color: #EBEBEB;
+	min-height: 450px;
 	position: relative;
 	overflow: hidden;
 }
@@ -140,14 +105,7 @@ header h1 {
 	width: 100%;
 	float: left;
 	overflow: hidden;
-	height: 650px;
-}
-
-#bottom2 {
-	width: 100%;
-	float: left;
-	overflow: hidden;
-	height: 650px;
+	min-height: 650px;
 }
 
 .anki {
@@ -155,7 +113,6 @@ header h1 {
 	width: 60%;
 	position: absolute;
 	padding: 2% 2% 0 7%;
-	/* margin: auto; */
 }
 
 .cap2 {
@@ -165,86 +122,23 @@ header h1 {
 	padding: 5%;
 }
 
-.prof {
-	width: 80%;
-	padding: 10% 0 0 20%;
-	position: center;
-}
-
-.blog {
-	float: right;
-	width: 66.7%;
-	color: black;
-	padding: 0 2% 0 2%;
-	font-size: 1.75em;
-	/*background-color: #FAFAFA;*/
-	background-color: rgba(250, 250, 250, 0.35);
-	height: 650px;
-	z-index: 1;
-}
-
-.blog2 {
-	float: right;
-	width: 30%;
-	color: black;
-	padding: 0 2% 0 10%;
-	font-size: 1.75em;
-	/*background-color: #FAFAFA;*/
-	background-color: rgba(250, 250, 250, 0.35);
-	height: 650px;
-	z-index: 1;
-}
 
 .bgimg {
-	/*background-image:  url('../images/wavy.png');*/
 	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); 
 	width: 66.7%;
 	position: absolute;
-
-	/*background-repeat: no-repeat;*/
-   /* background-size: cover;*/
-    z-index: -1;
-  }
-	/*TODO: wavy.png transparent gradient still doesn't work right in firefox, gotta fix that*/
-
-
-
-
-/*background: linear-gradient(0deg, transparent);*/
-
-/*-webkit-mask-image:-webkit-gradient(linear, to bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))*/
-
-/*-webkit-gradient(linear, top, rgba(0,0,0,0.5), rgba(200,20,200,0.5), url('../images/wavy.png'));*/
+  z-index: -1;
+}
 
 
 /*----------------------------------*/
 
-.placeholder {
-	float: right;
-	width: 33.3%;
-	padding: 2.5% 2.5% 0 0;
-	/*background-color: #D9D9D9;*/
-	background-color: rgba(217, 217, 217, 0.5);
-	height: 650px;
-	margin: 0;
-}
-
-
-
-.desc {
-	font-size: 1.75em;
-	/*background-color: #FAFAFA;*/
-	background-color: rgba(217, 217, 217, 0.5);
-	height: 650px;
-	z-index: 1;
-}
 
 .greybox {
 	float: right;
 	width: 33.3%;
 	padding: 0 2% 0 2%;
 	font-size: 1.75em;
-	/*background-color: #FAFAFA;*/
 	background-color: rgba(250, 250, 250, 0.5);
 	height: 650px;
 	z-index: 1;
@@ -255,7 +149,6 @@ header h1 {
 	width: 33.3%;
 	color: black;
 	padding: 2.5% 2.5% 0 0;
-	/*background-color: #D9D9D9;*/
 	background-color: rgba(217, 217, 217, 0.35);
 	height: 650px;
 	margin: 0;
@@ -263,25 +156,16 @@ header h1 {
 	
 }
 
-.placeholder2 {
+.contacts {
 	float: right;
 	width: 33.3%;
 	padding: 2.5% 2.5% 0 0;
-	/*background-color: #D9D9D9;*/
 	background-color: #DEDEDE;
 	height: 650px;
 	margin: 0;
 }
 
-
-.placeholder h2 {
-	font-size: 2em;
-	color: #FFF;
-	padding: 0;
-	margin: 0 0 2.5% 7.5%;
-}
-
-.placeholder2 h2 {
+.contacts h2 {
 	font-size: 2em;
 	color: #5C5C5C;
 	padding: 0;
@@ -319,10 +203,6 @@ ul.imglinks.column li {
 
 /*----------------------------------*/
 
-/* .techgrid {
-	width: 100%;
-} */
-
 .card {
 	float: left;
 	width: 13%;
@@ -337,7 +217,6 @@ ul.imglinks.column li {
 
 .logotitle {
 	margin-top: -8px;
-	/* margin: auto; */
 	position: relative;
 }
 
@@ -360,9 +239,6 @@ ul.imglinks.column li {
 
 
 .subnavbar {
-	/* position: fixed;
-	bottom: 0px;
-	right: 0px; */
 	width: 33.3%;
 	float: right;
 }
